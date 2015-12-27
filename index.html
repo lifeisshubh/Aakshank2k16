@@ -68,7 +68,8 @@
                         <a class="page-scroll" href="#team">Team</a>
                     </li>
                     <li>
-                        <a class="btn btn-danger" id="registration-btn" href="#">Register Here</a>
+                        <!-- Modal trigger for registration -->
+                        <a data-toggle="modal" data-target="#registration">Register Here</a>
                     </li>
 
                 </ul>
@@ -77,7 +78,25 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
+<!--    Modal-->
+    <div id="registration" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            
+            <!-- Modal Content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="header-content">
             <div class="header-content-inner">
