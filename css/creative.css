@@ -553,3 +553,10 @@ body {
         transform: scale(1);
     }
 }
+
+.small-heading {
+    font-size: 190% !important;
+    border-bottom: 1px solid grey;
+    padding-bottom: 30px;
+    text-align: center;
+}
