@@ -178,12 +178,13 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header.jpg);
-    background-position: center;
+    background-image: url(background-image/2.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat;
 }
 
 header .header-content {
@@ -570,4 +571,36 @@ body {
 
 #whole_screen{
     padding: 0px; !important
+}
+
+footer{
+    font-family: sans-serif;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    background-image: url(Background-image/polygon-background.jpg);
+    background-attachment: fixed;
+    background-blend-mode: darken;
+}
+
+footer div{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+footer div a{
+    color: white; !important;
+    font-size: 120%;
+}
+
+#copyright{
+    font-size: 80%;
+}
+
+#update{
+    background-image: url(background-image/polygon-background.jpg);
+    background-attachment:fixed;
+}
+
+#update h1{
+    color: white;
 }
