@@ -78,6 +78,44 @@
         </script>
 
 <!--        Registration script ends here-->
+    
+            <!-- To add google Maps APIs -->
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <!-- sensor=true because we are using location genrated by our javascript api in google Maps third party api-->
+    <script>
+        window.onload = function(){
+        var AakshankLocation = {latitude:22.6805641,longitude:75.8799728};
+        displayLocation(AakshankLocation);
+                              }
+        function displayLocation(position){
+            var lat = position.latitude;
+            var long = position.longitude;
+            AddMap(position);
+            }
+        var map=null;
+        function AddMap(coords){
+            var googleCoords = new google.maps.LatLng(coords.latitude,coords.longitude);
+            
+            var MapDetails = {center:googleCoords,  // The location at which map is going to be centered
+                              zoom:15,  // selected from scale of 0 to 21, 10 is consider as decent
+                              mapTypeId:google.maps.MapTypeId.ROADMAP   // To describe which type of map you can choose HYBRID or 
+                             };
+            var mapDiv = document.getElementById("map");
+            map = new google.maps.Map(mapDiv,MapDetails);
+            addMarker(map,googleCoords,"Aakshank 2k16","This is the location of Aakshank 2k16, where fun becomes real");
+            }
+        function addMarker(map,gcoords,title,content){
+            var markerOption = {map:map,position:gcoords,clickable:true,title:title};
+            var marker = new google.maps.Marker(markerOption);
+            
+            var infoOption = {position:gcoords,content:content};
+            var infoWindow = new google.maps.InfoWindow(infoOption);
+            google.maps.event.addListener(marker,"click",function(){infoWindow.open(map)});
+        }
+        </script>
+<!--    google maps Attachment script ends here-->
+    
+    
 </head>
 
 <body id="page-top">
@@ -261,7 +299,7 @@
         </div>
     </section>
 
-    <section class="no-padding" id="portfolio">
+    <section class="no-padding" id="event">
         <div class="container-fluid">
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
@@ -357,6 +395,9 @@
             </div>
         </div>
     </section>
+    <section id="sponsor">
+    
+    </section>
 
     <aside class="bg-dark">
         <div class="container text-center">
@@ -367,7 +408,7 @@
         </div>
     </aside>
 
-    <section id="contact">
+    <section id="team">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -386,6 +427,11 @@
             </div>
         </div>
     </section>
+        <div class="container-fluid" id="whole_screen">
+        <!-- For Adding google Maps -->
+            <div id="map">
+            </div>
+        </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

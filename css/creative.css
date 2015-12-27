@@ -560,3 +560,14 @@ body {
     padding-bottom: 30px;
     text-align: center;
 }
+
+#map{
+    width: 100%;
+    height: 300px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#whole_screen{
+    padding: 0px; !important
+}
