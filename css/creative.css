@@ -573,7 +573,7 @@ body {
     padding: 0px; !important
 }
 
-footer{
+#footer{
     font-family: sans-serif;
     background-color: rgba(0,0,0,0.7);
     color: white;
@@ -582,11 +582,11 @@ footer{
     background-blend-mode: darken;
 }
 
-footer div{
+#footer div{
     padding-top: 5px;
 }
 
-footer div a{
+#footer div a{
     color: white; !important;
     font-size: 120%;
 }
@@ -613,3 +613,9 @@ footer div a{
     font-family: pb;
     src: url(../fonts/zg.ttf);
 }
+
+#about{
+    background-image: url(background-image/abt.jpg);
+    background-position: center;
+}
+
