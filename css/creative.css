@@ -645,3 +645,28 @@ body {
 
 /* Preloader Ends */
 
+/* registration tab */
+
+#reg-tab{
+    background-color: rgba(1,1,1,0.5);
+    padding-left: 3%;
+    padding-right: 0.5%;
+    padding-top: 0.7%;
+    padding-bottom: 0.7%;
+    position: fixed;
+    z-index: 100;
+    bottom: 5%;
+    border-bottom-right-radius: 20%;
+    border-top-right-radius: 20%;
+    font-size: 130%;
+    left: -2%;
+    background-image: url(background-image/);
+    background-attachment: fixed;
+    background-position: center;
+    border-color: transparent;
+}
+
+#reg-tab a{
+    font-family: cursive;
+    color: #fff;
+}
