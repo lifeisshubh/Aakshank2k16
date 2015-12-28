@@ -178,7 +178,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(background-image/2.jpg);
+    background-image: url(background-image/3.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -584,7 +584,6 @@ footer{
 
 footer div{
     padding-top: 5px;
-    padding-bottom: 5px;
 }
 
 footer div a{
@@ -603,4 +602,14 @@ footer div a{
 
 #update h1{
     color: white;
+}
+
+@font-face {
+    font-family: pf;
+    src: url(../fonts/Polygon-Regular.otf);
+}
+
+@font-face{
+    font-family: pb;
+    src: url(../fonts/zg.ttf);
 }
