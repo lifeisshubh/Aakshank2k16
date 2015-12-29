@@ -580,15 +580,16 @@ body {
     background-image: url(Background-image/polygon-background.jpg);
     background-attachment: fixed;
     background-blend-mode: darken;
+    padding-bottom: 5%;
 }
 
 #footer div{
-    padding-top: 5px;
+    padding-top: 1%;
 }
 
 #footer div a{
     color: white; !important;
-    font-size: 120%;
+    font-size: 80%;
 }
 
 #copyright{
@@ -669,4 +670,15 @@ body {
 #reg-tab a{
     font-family: cursive;
     color: #fff;
+}
+
+#icon-id img{
+    width: 32px;
+    height: 32px;
+}
+
+#icon-id{
+    margin: 0px;
+    padding: 0px;
+    margin-top: -4%;
 }
