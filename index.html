@@ -98,14 +98,16 @@
         var map=null;
         function AddMap(coords){
             var googleCoords = new google.maps.LatLng(coords.latitude,coords.longitude);
+            var gateCoords = new google.maps.LatLng(22.6808301,75.8760725); // for main gate location
             
             var MapDetails = {center:googleCoords,  // The location at which map is going to be centered
-                              zoom:15,  // selected from scale of 0 to 21, 10 is consider as decent
+                              zoom:16,  // selected from scale of 0 to 21, 10 is consider as decent
                               mapTypeId:google.maps.MapTypeId.ROADMAP   // To describe which type of map you can choose HYBRID or 
                              };
             var mapDiv = document.getElementById("map");
             map = new google.maps.Map(mapDiv,MapDetails);
             addMarker(map,googleCoords,"Aakshank 2k16","This is the location of Aakshank 2k16, where fun becomes real");
+            addMarker(map,gateCoords,"Entrance to Aakshank","Follow the path to reach your destiny");
             }
         function addMarker(map,gcoords,title,content){
             var markerOption = {map:map,position:gcoords,clickable:true,title:title};
@@ -472,7 +474,7 @@
                             <a href="#sponsor">Sponsors</a>
                         </div>
                         <div class="col-xs-6">
-                            <a href="#team">Team</a>
+                            <a href="#team">Contact Us</a>
                         </div>
                     </div>
                     <div class="row">
@@ -484,7 +486,7 @@
                 <div class="col-sm-4 col-sm-push-4">
                     <div class="row">
                         <div class="col-xs-6">
-                            <a href="#update">Update</a>
+                            <a href="#update">Updates</a>
                         </div>
                         <div class="col-xs-6">
                             <a href="#event">Event</a>
