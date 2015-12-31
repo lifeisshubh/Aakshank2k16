@@ -681,28 +681,13 @@ body {
 /* registration tab */
 
 #reg-tab{
-    background-color: rgba(1,1,1,0.5);
-    padding-left: 3%;
-    padding-right: 0.5%;
-    padding-top: 0.7%;
-    padding-bottom: 0.7%;
     position: fixed;
     z-index: 100;
     bottom: 5%;
-    border-bottom-right-radius: 20%;
-    border-top-right-radius: 20%;
-    font-size: 130%;
-    left: -2%;
-    background-image: url(background-image/);
-    background-attachment: fixed;
-    background-position: center;
-    border-color: transparent;
+    left: -2px;
+    width:20px;
 }
 
-#reg-tab a{
-    font-family: cursive;
-    color: #fff;
-}
 
 #icon-id img{
     width: 32px;
@@ -725,5 +710,121 @@ body {
 }
 
 #mainNav li a span{
-    
+    font-size:150%;
+    vertical-align:
+        -5px;
+    padding-right:15px;
+    font-weight: bold;
+    color: beige;
 }
+
+#mainNav li a{
+    color: beige;
+}
+
+
+/* Styling of Carousel for day events */
+
+#day{
+    height: 350px;
+    position: relative;
+    background-image: url(background-image/3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.day-container {
+  margin: 0 auto;
+  padding-top: 50px;
+  width: 250px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.day-carousel {
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.day-item {
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 250px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  color: #FFF;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+.day-a {
+  transform: rotateY(0deg) translateZ(250px);
+  background: #ed1c24;
+}
+.day-b {
+  transform: rotateY(60deg) translateZ(250px);
+  background: #0072bc;
+}
+.day-c {
+  transform: rotateY(120deg) translateZ(250px);
+  background: #39b54a;
+}
+.day-d {
+  transform: rotateY(180deg) translateZ(250px);
+  background: #f26522;
+}
+.day-e {
+  transform: rotateY(240deg) translateZ(250px);
+  background: #630460;
+} 
+.day-f {
+  transform: rotateY(300deg) translateZ(250px);
+  background: #8c6239;
+}
+
+.day-next, .day-prev {
+  color: #444;
+position: absolute;
+  top: 100px;
+  padding: 1em 2em;
+  cursor: pointer;
+transition: box-shadow 0.1s, top 0.1s;
+}
+.day-next:hover, .day-prev:hover { color: #000; }
+.day-next:active, .day-prev:active {
+  top: 104px;
+  box-shadow: 0 1px 0 #999;
+}
+.day-next { right: 5em; }
+.day-prev { left: 5em; }
+
+@media screen and (max-width:881px){
+    .day-next, .day-prev,.day-next:hover,.day-next:active,.day-prev:hover,.day-prev:active{
+        position: absolute;
+        bottom: 20px;
+        top: auto;
+    }
+}
+
+.day-carousel div figure{
+    opacity: 1;
+    position: relative;
+}
+
+.day-carousel div figure figcaption{
+    z-index: 12;
+    position: absolute;
+    bottom: -85px;
+    left: 30px;
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    font-weight: bold;
+    opacity: 1;
+}
+/* styling of carousel for day events ends here */
+

@@ -1,8 +1,8 @@
-var carousel = $(".carousel"),
+var day_carousels = $(".day-carousel"),
     currdeg  = 0;
 
-$(".next").on("click", { d: "n" }, rotate);
-$(".prev").on("click", { d: "p" }, rotate);
+$(".day-next").on("click", { d: "n" }, rotate);
+$(".day-prev").on("click", { d: "p" }, rotate);
 
 function rotate(e){
   if(e.data.d=="n"){
@@ -11,7 +11,7 @@ function rotate(e){
   if(e.data.d=="p"){
     currdeg = currdeg + 60;
   }
-  carousel.css({
+ day_carousels.css({
     "-webkit-transform": "rotateY("+currdeg+"deg)",
     "-moz-transform": "rotateY("+currdeg+"deg)",
     "-o-transform": "rotateY("+currdeg+"deg)",
