@@ -26,7 +26,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
     
-<!--    Matarial Design Lite-->
+<!--    sidebar-->
+    <link  rel="stylesheet" type="text/css" href="side-navbar.css">
     
     
 <!--    advanced glyphicons-->
@@ -127,13 +128,58 @@
     
 </head>
 
-<body id="page-top">
+<body id="page-top" data-spy="scroll" data-target="#mainNav" data-offset="20">
     
-<!--    Registration link for page-->
-    <div class="alert alert-success" id="reg-tab">
-      <a href="#" class="close" data-dismiss="alert" aria-label="close" style="padding-left:15px"> &times;</a>
-      <a data-toggle="modal" data-target="#registration">Register Here <span class="glyphicon glyphicon-pencil"> </span> </a>
+    <div id="wrapper" >
+
+        <!-- Sidebar -->
+        <nav id="sidebar-wrapper" class="navbar" style="font-family:sans-serif;">
+            <ul class="sidebar-nav navbar" id="mainNav" >
+                <li class="sidebar-brand" data-scroll>
+                    <a class="page-scroll" href="#page-top">
+                        Aakshank 2k16
+                    </a>
+                    </li>
+                    <li data-scroll>
+                        <a class="page-scroll" href="#about"><span class="glyphicon glyphicon-info-sign"></span> About</a>
+                    </li>
+                    <li  data-scroll>
+                        <a class="page-scroll" href="#event"><span class="glyphicon glyphicon-film"> </span> Events</a>
+                    </li>
+                    <li data-scroll>
+                        <a class="page-scroll" href="#update"><span class="glyphicon glyphicon-upload"></span>Updates</a>
+                    </li>
+                    
+                    <li data-scroll>
+                        <a class="page-scroll" href="#sponsor"><span class="fa fa-money"></span> Sponsors</a>
+                    </li>
+                    <li data-scroll>
+                        <a class="page-scroll" href="#team"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a>
+                    </li>
+                    <li data-scroll>
+                        <!-- Modal trigger for registration -->
+                        <a data-toggle="modal" data-target="#registration"><span class="glyphicon glyphicon-pencil"></span> Register Here</a>
+                    </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Toggle button -->
+        <div id="page-toggle-btn-1">
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle" style="border-top-left-radius:0px;border-bottom-left-radius:0px"><span class="fa fa-th-list"></span></a>
+        </div>
+        
+        <!--    Registration link for page-->
+    <div id="reg-tab">
+      <a data-toggle="modal" data-target="#registration"><img src="img/Register.png"></a>
     </div>
+
+        
+        <!-- /#page-Page Toggle Button Ends -->
+
+    </div>
+    <!-- /#wrapper -->
+    
     
 <!--    Pre-loader starts-->
     <div id="preloader">
@@ -152,51 +198,11 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <!--    Facebook feed Integration Ends-->
-
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top" style="font-family: 'Bree Serif', serif;">Aakshank</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#event">Events</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#update">Updates</a>
-                    </li>
-                    
-                    <li>
-                        <a class="page-scroll" href="#sponsor">Sponsors</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#team">Contact Us</a>
-                    </li>
-                    <li>
-                        <!-- Modal trigger for registration -->
-                        <a data-toggle="modal" data-target="#registration">Register Here</a>
-                    </li>
-
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-<!--    Modal-->
+    
+    <!-- nav was here -->
+    
+    
+    <!--    Modal-->
     <div id="registration" class="modal fade" role="dialog">
         <div class="modal-dialog">
             
@@ -207,7 +213,7 @@
                     <h4 class="modal-title">Registration for Aakshank 2k16</h4>
                 </div>
                 <div class="modal-body">
-        <form name="aakshank_form" class="form-horizontal" role="form" action="javascript: postContactToGoogle()" target="_blank">
+        <form name="aakshank_form" id="regForm" class="form-horizontal" role="form">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="name">Name :</label>
                 
@@ -261,7 +267,7 @@
                 </div>
             <div class="form-group">
                 <div class="col-sm-10 col-sm-offset-2">
-                    <button type="submit" class="btn btn-block btn-primary">Submit <span class="glyphicon glyphicon-ok-sign"></span></button>
+                    <button class="btn btn-block btn-primary" onclick="subm(event);">Submit <span class="glyphicon glyphicon-ok-sign"></span></button>
                     </div>
             </div>
             
@@ -284,7 +290,9 @@
                 </div>
                 <div class="row">
                 <p class="small">The largest cultural fest of central India</p>
-                <a href="#about" id="scroll-down-btn" class="btn btn-circle page-scroll">
+                </div>
+                <div class="col-xs-4 col-xs-offset-4">
+                <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
                 </div>
@@ -305,15 +313,14 @@
         </div>
     </section>
     <section class="no-padding" id="event">
-        <div class="container-fluid">
-            <div class="page-header">
-                <h1>Informals</h1>
-            </div>
-            
-            
-        </div>
+        <iframe class="no-padding" src="slide/index.html" style="width:100%;height:100vh;border:0;" scrolling="no"></iframe>
     </section>
-
+    
+    <section class="no-padding">
+        <iframe class="no-padding" src="day/index.html" style="width:100%;height:375px;border:0;" scrolling="no"></iframe>
+    </section>
+    
+    
     <section id="update">
         <div class="container">
             <h1 class="small-heading"><small><span class="glyphicon glyphicon-refresh"></span></small> Recent Updates</h1>
@@ -467,6 +474,17 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+    
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    
+        $("#wrapper").toggleClass("toggled");
+        
+    </script>
 
 </body>
 

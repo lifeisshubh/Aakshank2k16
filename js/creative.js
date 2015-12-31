@@ -4,6 +4,27 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+ function subm(e)
+{
+    e.preventDefault();
+     var name = $('#name').val();
+                var email_id = $('#email_id').val();
+                var phone_no = $('#phone_no').val();
+                var college = $('#college').val();
+                var city = $('#city').val();
+                var year = $('#year').val();
+                var branch = $('#branch').val();
+                
+                if ((name !== "") && (email_id !== "") && (phone_no !== "") && ( branch !== "") && (city !== "") && (year !== "") && (college !== "")  && ( (validateEmail(email_id)))) {
+                   $.post( "http://aakshank2k16-ietdauniv.rhcloud.com/submit",{name:name,email:email_id,phone:phone_no,college:college,city:city,year:year,branch:branch},function( data ) {
+  console.log(data);
+});
+                }
+                else {
+                    console.log("Error Message : Not Working");
+                    alert("Error");
+                }
+}
 (function($) {
     "use strict"; // Start of use strict
 
@@ -46,3 +67,44 @@
     new WOW().init();
 
 })(jQuery); // End of use strict
+
+//slider
+
+var link = $('.com__nav-link');
+var linkParent = link.parent('li');
+var section = $('.com__section');
+var sectionContent = section.find('*');
+
+var switchTab = function() {
+	var p = $(this).parent('li');
+	var i  = p.index();
+	var s = section.eq(i);
+	var c = s.find('*');
+	
+	section.removeClass('active');
+	sectionContent.removeAttr('style');
+	s.addClass('active');
+	
+	c.css({
+		transform: 'none',
+		opacity: 1
+	});
+	
+	linkParent.removeClass('active');
+	p.addClass('active');
+	
+	return false;
+};
+
+link.on('click', switchTab);
+
+function activeFirst() {
+	section.first().addClass('active');
+	section.first().find('*').css({
+		transform: 'none',
+		opacity: 1
+	});
+	linkParent.first().addClass('active');
+}
+
+activeFirst();
