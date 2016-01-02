@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+    padding: 0px;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
 
 .com {
      margin:0;
+    padding: 0px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23,6 +25,7 @@ body {
   overflow: hidden;
 }
 .com__content {
+    padding: 0px;
      margin:0;
   position: relative;
   -webkit-box-flex: 8;
