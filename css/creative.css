@@ -177,18 +177,21 @@ header {
     position: relative;
     width: 100%;
     min-height: auto;
-    height: 100vh;
+    height: 100%;
     text-align: center;
     color: #fff;
-    background-image: url(background-image/3.jpg);
+    background-image: url(../img/1.png);
+     background-repeat: repeat, no-repeat;
+    opacity: 1;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-attachment: fixed;
-    background-repeat: repeat;
+    background-size: auto, cover;
+    background-position: center center, top left;
 }
 
+/* The background video Adjustment */
 header .header-content {
     width: 100%;
     height: 100vh;
@@ -629,8 +632,8 @@ body {
 }
 
 #update{
-    background-image: url(background-image/polygon-background.jpg);
-    background-attachment:fixed;
+    background-image: url();
+   
 }
 
 #update h1{
@@ -751,6 +754,12 @@ body {
 }
 
 
+/* Cursor for HTML */
+body *, html *{
+    cursor: url(../img/icon_logo.png), pointer;
+}
+
+/* Cursor styling ends here */
 .day-item {
   display: block;
   position: absolute;
@@ -849,3 +858,22 @@ transition: box-shadow 0.1s, top 0.1s;
 #about{
     height:100vh;
 }
+/* Video in background */
+header video {
+    position:fixed;
+    top:50%;
+    left:50%;
+    min-width:100%;
+    min-height:100%;
+    width:auto;
+    height:auto;
+    z-index:-100;
+    transform:translateX(-50%) translateY(-50%);
+}
+
+/* DAVV LOGO */
+#logo-davv{
+    position: absolute;
+    right: 5vh;
+    top: 5vh;
+    }

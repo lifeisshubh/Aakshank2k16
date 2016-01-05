@@ -32,7 +32,6 @@ body {
   -webkit-flex: 8;
       -ms-flex: 8;
           flex: 8;
-  background: #404855;
   padding: 10vh 10vw;
 }
 .com__section {
@@ -53,7 +52,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0 10%;
+  padding: 0;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -305,4 +304,58 @@ body {
 .logo img:hover {
   -webkit-transform: rotate(180deg) scale(1.1);
           transform: rotate(180deg) scale(1.1);
+}
+
+/* Cursor for HTML */
+body *, html *{
+    cursor: url(../img/icon_logo.png), pointer;
+}
+
+/* Cursor styling ends here */
+
+
+.com{
+    height: 100%;
+    background-image: url('http://dupontcours.free.fr/IMG/dots.png'),                             url('#');
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    background-position: center center, top left;
+    font-family: sans-serif;
+    color: #051a00;
+}
+ 
+.com video {
+    position:fixed;
+    top:50%;
+    left:50%;
+    min-width:100%;
+    min-height:100%;
+    width:auto;
+    height:auto;
+    z-index:-1;
+    transform:translateX(-50%) translateY(-50%);
+}
+
+table tr,table th{
+    padding: 10px 2px;
+    padding-left:2px;
+    
+    color: azure;
+}
+
+table th{
+    font-weight: bold;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+section > div.com__section-half{
+    padding: 5%;
+}
+
+.com__nav-item p{
+    color: aliceblue;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 150%;
 }
