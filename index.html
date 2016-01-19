@@ -27,8 +27,7 @@
     <link rel="stylesheet" href="css/creative.css" type="text/css">
     
 <!--    sidebar-->
-    <link  rel="stylesheet" type="text/css" href="side-navbar.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+    <link  rel="stylesheet" type="text/css" href="css/side-navbar.css">
     
     
 <!--    advanced glyphicons-->
@@ -110,48 +109,10 @@
 
 <!--        Registration script ends here-->
     
-            <!-- To add google Maps APIs -->
-        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-        <!-- sensor=true because we are using location genrated by our javascript api in google Maps third party api-->
-    <script>
-        window.onload = function(){
-        var AakshankLocation = {latitude:22.6805641,longitude:75.8799728};
-        displayLocation(AakshankLocation);
-                              }
-        function displayLocation(position){
-            var lat = position.latitude;
-            var long = position.longitude;
-            AddMap(position);
-            }
-        var map=null;
-        function AddMap(coords){
-            var googleCoords = new google.maps.LatLng(coords.latitude,coords.longitude);
-            var gateCoords = new google.maps.LatLng(22.6808301,75.8760725); // for main gate location
             
-            var MapDetails = {center:googleCoords,  // The location at which map is going to be centered
-                              zoom:16,  // selected from scale of 0 to 21, 10 is consider as decent
-                              mapTypeId:google.maps.MapTypeId.ROADMAP   // To describe which type of map you can choose HYBRID or 
-                             };
-            var mapDiv = document.getElementById("map");
-            map = new google.maps.Map(mapDiv,MapDetails);
-            addMarker(map,googleCoords,"Aakshank 2k16","This is the location of Aakshank 2k16, where fun becomes real");
-            addMarker(map,gateCoords,"Entrance to Aakshank","Follow the path to reach your destiny");
-            }
-        function addMarker(map,gcoords,title,content){
-            var markerOption = {map:map,position:gcoords,clickable:true,title:title};
-            var marker = new google.maps.Marker(markerOption);
-            
-            var infoOption = {position:gcoords,content:content};
-            var infoWindow = new google.maps.InfoWindow(infoOption);
-            google.maps.event.addListener(marker,"click",function(){infoWindow.open(map)});
-        }
-        </script>
-<!--    google maps Attachment script ends here-->
-    
-    
 </head>
 
-<body id="page-top" data-spy="scroll" data-target="#nav-a" data-offset="20px">
+<body id="page-top" data-spy="scroll" data-target="#nav-a" data-offset="20">
     <div id="wrapper" >
 
         <!-- Sidebar -->
@@ -304,9 +265,10 @@
     </div>
     <header>
         <video autoplay loop="true"
-  poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg"
+  poster=""
   id="bgvid">
-    <source src="ds.mp4" type="video/mp4">
+    <source src="video/back_v.webm" type="video/webm">
+    <source src="video/back_v.mp4" type="video/mp4">
     </video>
         
         <div id="logo-davv" class="col-xs-3 col-sm-2 col-md-1">
@@ -314,53 +276,41 @@
         </div>
 
         <div class="header-content">
-            <div class="header-content-inner">
+            <div class="header-content-inner" id="header_box">
                 <div class="row">
-                <div class="col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
-                <img class="img-responsive" src="img/cover_logo.png">
+                <div class="col-sm-8 col-xs-10 col-xs-offset-1 col-sm-offset-2">
+                    <section id="sup_header">
+                            <div id="container" class="container">
+                                    <ul id="scene" class="scene">
+                                        <li class="layer" data-depth="0.40"><img id="secondlayer" src="images/layer4.png" class="img-responsive"></li>
+                                        <li class="layer" data-depth="0.20"><img id="firstlayer" src="images/layer5.png" class="img-responsive"></li>
+                                        <li class="layer" data-depth="-0.40"><img id="logo" src="images/layer6.png" class="img-responsive fadeIn"></li>
+                                    </ul>
+                            </div>
+                    </section>
+                
                 </div>
                 </div>
-                <div class="row">
-                <p class="small">The largest cultural fest of central India</p>
-                </div>
+                
+                <div class="text-center" id="box-x">
                 <div class="col-xs-4 col-xs-offset-4">
                 <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
+                </div>
                 </div>
             </div>
         </div>
     </header>
     
 <!--    new header -->
-    <section id="sup_header">
-        <div id="container" class="container">
-                <ul id="scene" class="scene">
-                    <li class="layer" data-depth="1.00"><img src="images/layer..1.png"></li>
-                    <li class="layer" data-depth="0.80"><img src="images/layer..2.png"></li>
-                    <li class="layer" data-depth="0.60"><img src="images/layer..3.png"></li>
-                    <li class="layer" data-depth="0.40"><img id="secondlayer" src="images/layer4.png"></li>
-                    <li class="layer" data-depth="0.20"><img id="firstlayer" src="images/layer5.png"></li>
-                    <li class="layer" data-depth="-0.40"><img id="logo" src="images/layer6.png"></li>
-                </ul>
-        </div>
-        
-    <script src="js/parallax.min.js"></script>    
-        <script>
-
-	// Pretty simple huh?
-	var scene = document.getElementById('scene');
-	var parallax = new Parallax(scene);
-
-	</script>
-
-    </section>
 
     <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading heading-font">About Us</h2>
+                <div class="col-xs-8 col-xs-offset-2 text-center">
+                    <h2 class="section-heading heading-font" style="font-size:40px">Since</h2>
+                    <p id="year_run">Time</p>
                     <hr class="light">
                     <p>Aakshank is a annual cutural festival of Institute of Engineering and Technology, DAVV which was started by a group of enthusuastic IETians, in 2001, in order to provide a grooming stage to the budding talents in the Institute, Aakshank has transformed itself into the most zestful and extra-ordinary cultural bonanza in Central India. The event cover a wide array of events ranging from competition in varied genre like Dance, Drama, Singing to Star Night, DJ Night, StuntMania and plenty of informals.</p>
                     
@@ -368,14 +318,10 @@
             </div>
         </div>
     </section>
-    <section class="no-padding" id="event">
-        <iframe class="no-padding" src="slide/index.html" style="width:100%;height:100vh;border:0;" scrolling="no"></iframe>
-    </section>
-    
     
 <!--    Day Event Starts Here-->
-    <section class="no-padding" id="day">
-            <h1>Informals</h1>
+    <section class="no-padding col-xs-12" id="day">
+            <h1 style="color:#fff;font-size:60px;">Informals</h1>
     
         <div class="day-container">
             <div class="day-carousel">
@@ -385,14 +331,34 @@
                 <div class="day-item day-d"><figure><img class="img-responsive img-rounded" src="img/photobooth.jpg"><p>Photobooth</p></figure></div>
                 <div class="day-item day-e"><figure><img class="img-responsive img-rounded" src="img/stunt.jpg"><p>Stunt Mania</p></figure></div>
                 <div class="day-item day-f"><figure><img class="img-responsive img-rounded" src="img/z.jpg"><p>Zorbing</p></figure></div>
+        
+            <div class="day-item day-g"><figure><img class="img-responsive img-rounded" src="img/z.jpg"><p>Zorbing</p></figure></div>
+            
+        <div class="day-item day-h"><figure><img class="img-responsive img-rounded" src="img/z.jpg"><p>Zorbing</p></figure></div>
+            
+    <div class="day-item day-i"><figure><img class="img-responsive img-rounded" src="img/z.jpg"><p>Zorbing</p></figure></div>
+            
+    <div class="day-item day-j"><figure><img class="img-responsive img-rounded" src="img/z.jpg"><p>Zorbing</p></figure></div>
+            
+<div class="day-item day-k"><figure><img class="img-responsive img-rounded" src="img/z.jpg"><p>Zorbing</p></figure></div>
+            
+<div class="day-item day-l"><figure><img class="img-responsive img-rounded" src="img/z.jpg"><p>Zorbing</p></figure></div>
             </div>
-        </div>
-        <div class="day-next btn btn-default">Next</div>
-        <div class="day-prev btn btn-default">Prev</div>
+
+</div>
+        <div class="day-next btn btn-default" id="next-button">Next</div>
+        <div class="day-prev btn btn-default" id="prev-button">Prev</div>
     </section>
 
 
 <!--   Day Events Ends Here -->
+    
+
+    
+    <section class="no-padding" id="event">
+        <iframe class="no-padding" src="slide/index.html" style="width:100%;height:100vh;border:0;" scrolling="no"></iframe>
+    </section>
+    
     
     
     <section id="update">
@@ -419,9 +385,7 @@
         </div>
     </section>
 
-    <section id="sponsor">
-    
-    </section>
+
     <section id="team" class="section">
         <div class="container">
             <div class="row">
@@ -477,7 +441,8 @@
             </div>
             <div class="row">
                 <p>&copy; Aakshank 2k16<br>
-                <a href=""><span class="fa fa-facebook-square"></span></a> <a href=""><span class="fa fa-twitter-square"></span></a> <a href=""><span class="fa fa-instagram"></span></a> <a href=""><span class="fa fa-pinterest"></span></a></p>
+                <a href="https://www.facebook.com/aakshank/"><span class="fa fa-facebook-square"></span></a> <a href="https://twitter.com/aakshank"><span class="fa fa-twitter-square"></span></a> <a href="https://www.instagram.com/aakshank/"><span class="fa fa-instagram"></span></a> <a href="https://in.pinterest.com/aakshank/"><span class="fa fa-pinterest"></span></a></p>
+                <p class="small">Created in <span class="fa fa-heart"></span> with Bootstrap &amp; NodeJs</p>
                 </div>
             </div>
         </div>        
@@ -521,7 +486,18 @@
         
     </script>
     
-    <script src="js/jquery.fullPage.min.js"></script>
+    
+<!--    Parallax lib-->
+    <script src="js/parallax.min.js"></script>    
+        <script>
+
+	// Pretty simple huh?
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+
+	</script>
+
+    
     
 </body>
 

@@ -119,10 +119,10 @@ $(".day-prev").on("click", { d: "p" }, rotate);
 
 function rotate(e){
   if(e.data.d=="n"){
-    currdeg = currdeg - 60;
+    currdeg = currdeg - 30;
   }
   if(e.data.d=="p"){
-    currdeg = currdeg + 60;
+    currdeg = currdeg + 30;
   }
   day_carousel.css({
     "-webkit-transform": "rotateY("+currdeg+"deg)",
@@ -133,3 +133,18 @@ function rotate(e){
 }
 
 /* JavaScript Code ends here */
+
+window.onload = function(){
+    var myVar = setInterval(myTimer, 1000);
+}
+
+function myTimer() {
+    var foundation_date = new Date("2001-02-01");
+    var today = new Date();
+    
+    var day = new Date(today-foundation_date);
+    var year = day.getFullYear() - 1970;
+    var month = day.getMonth();
+    var time = day.getDay();
+    document.getElementById("year_run").innerHTML = year + " year, "+ month+" month, " + time + " day, " +day.getHours() +" hours, " +day.getMinutes()+" minutes, "+day.getSeconds()+" Seconds" ;
+}
