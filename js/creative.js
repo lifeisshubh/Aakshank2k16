@@ -146,5 +146,5 @@ function myTimer() {
     var year = day.getFullYear() - 1970;
     var month = day.getMonth();
     var time = day.getDay();
-    document.getElementById("year_run").innerHTML = year + " year, "+ month+" month, " + time + " day, " +day.getHours() +" hours, " +day.getMinutes()+" minutes, "+day.getSeconds()+" Seconds" ;
+    document.getElementById("year_run").innerHTML = year + " years, "+ month+" months, " + time + " days, " +day.getHours() +" hours, " +day.getMinutes()+" minutes, "+day.getSeconds()+" Seconds" ;
 }

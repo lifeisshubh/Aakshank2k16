@@ -1056,3 +1056,16 @@ header{
 }
 
 }
+
+
+    @media screen and (max-width:500px){
+        #about{
+            padding-top: 15px; 
+        }
+        
+        #year_run{
+            font-size: 25px;
+        }
+}
+    
+
