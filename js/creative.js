@@ -6,6 +6,31 @@
 
 //clearall function
 
+
+/* JavaScript Code for Day events */
+var day_carousel = $(".day-carousel"),
+    currdeg  = 0;
+
+$(".day-next").on("click", { d: "n" }, rotate);
+$(".day-prev").on("click", { d: "p" }, rotate);
+
+function rotate(e){
+  if(e.data.d=="n"){
+    currdeg = currdeg - 30;
+  }
+  if(e.data.d=="p"){
+    currdeg = currdeg + 30;
+  }
+  day_carousel.css({
+    "-webkit-transform": "rotateY("+currdeg+"deg)",
+    "-moz-transform": "rotateY("+currdeg+"deg)",
+    "-o-transform": "rotateY("+currdeg+"deg)",
+    "transform": "rotateY("+currdeg+"deg)"
+  });
+}
+
+
+
 function clearAll(){
     document.getElementById("name").value = "";
     document.getElementById("phone_no").value = "";
@@ -138,28 +163,6 @@ function activeFirst() {
 
 activeFirst();
 
-
-/* JavaScript Code for Day events */
-var day_carousel = $(".day-carousel"),
-    currdeg  = 0;
-
-$(".day-next").on("click", { d: "n" }, rotate);
-$(".day-prev").on("click", { d: "p" }, rotate);
-
-function rotate(e){
-  if(e.data.d=="n"){
-    currdeg = currdeg - 30;
-  }
-  if(e.data.d=="p"){
-    currdeg = currdeg + 30;
-  }
-  day_carousel.css({
-    "-webkit-transform": "rotateY("+currdeg+"deg)",
-    "-moz-transform": "rotateY("+currdeg+"deg)",
-    "-o-transform": "rotateY("+currdeg+"deg)",
-    "transform": "rotateY("+currdeg+"deg)"
-  });
-}
 
 /* JavaScript Code ends here */
 
