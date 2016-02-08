@@ -4,6 +4,33 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+//clearall function
+
+function clearAll(){
+    document.getElementById("name").value = "";
+    document.getElementById("phone_no").value = "";
+    document.getElementById("email_id").value="";
+    document.getElementById("college").value="";
+    document.getElementById("city").value="";
+}
+//Timer
+window.onload = function(){
+    var myVar = setInterval(myTimer, 1000);
+}
+
+function myTimer() {
+    var foundation_date = new Date("2001-02-01");
+    var today = new Date();
+    
+    var day = new Date(today-foundation_date);
+    var year = day.getFullYear() - 1970;
+    var month = day.getMonth();
+    var time = day.getDay();
+    document.getElementById("year_run").innerHTML = year + " years, "+ month+" months, " + time + " days, " +day.getHours() +" hours, " +day.getMinutes()+" minutes, "+day.getSeconds()+" Seconds" ;
+}
+
+// Timer Ends Here
+
  function subm(e)
 {
     e.preventDefault();
@@ -17,7 +44,9 @@
                 
                 if ((name !== "") && (email_id !== "") && (phone_no !== "") && ( branch !== "") && (city !== "") && (year !== "") && (college !== "")  && ( (validateEmail(email_id)))) {
                    $.post( "http://aakshank2k16-ietdauniv.rhcloud.com/submit",{name:name,email:email_id,phone:phone_no,college:college,city:city,year:year,branch:branch},function( data ) {
-  console.log(data);
+                console.log(data);
+                alert("You have registered sucessfully");
+                clearAll();
 });
                 }
                 else {
@@ -134,17 +163,3 @@ function rotate(e){
 
 /* JavaScript Code ends here */
 
-window.onload = function(){
-    var myVar = setInterval(myTimer, 1000);
-}
-
-function myTimer() {
-    var foundation_date = new Date("2001-02-01");
-    var today = new Date();
-    
-    var day = new Date(today-foundation_date);
-    var year = day.getFullYear() - 1970;
-    var month = day.getMonth();
-    var time = day.getDay();
-    document.getElementById("year_run").innerHTML = year + " years, "+ month+" months, " + time + " days, " +day.getHours() +" hours, " +day.getMinutes()+" minutes, "+day.getSeconds()+" Seconds" ;
-}

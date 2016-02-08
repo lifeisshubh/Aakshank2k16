@@ -609,11 +609,47 @@ body {
 
 /* footer ends */
 
-
-#update{
-    background-image: url();
-   
+/*instagram attachment add here*/
+#instafeed a {
+  padding:5px 5px 1px 5px !important;
+  border:1px solid #e1e1e1 !important;
+  border-radius: 4px !important;
+  position: relative !important;
+  top: 5px !important;
 }
+#instafeed .likes {
+  background:rgba(233,105,44,0.7) !important;
+  font-family:sans-serif !important;
+  font-size:1.2em !important;
+  position:absolute !important;
+  color:#ffffff !important;
+  right:5px !important;
+  top:5px !important;
+  left:5px !important;
+  opacity:0 !important;
+  text-align:center !important;
+    padding-top: 45% !important;
+    height: 100% !important;
+  text-shadow:0 1px rgba(0,0,0,0.5) !important;
+  -webkit-transition: opacity 100ms ease !important;
+	-moz-transition: opacity 100ms ease !important;
+	-o-transition: opacity 100ms ease !important;
+	-ms-transition: opacity 100ms ease !important;
+	transition: opacity 100ms ease !important;
+}
+
+#update .row > div{
+    text-align: center;
+    padding-bottom: 40px;
+    
+}
+
+#instafeed a:hover .likes {
+  opacity:1 !important;
+}
+/*instagram attachment ends here*/
+
+
 
 #update h1{
     color: white;
@@ -630,20 +666,13 @@ body {
 }
 
 #about{
-    background-image: url("../img/about%20us%20bg.png");
+    background-image: url("../img/about-us-bg.jpg");
     background-position: center;
     height: 100%;
     background-size: cover;
-    background-attachment:scroll;
     background-color:transparent;
     font-family: "Century Gothic";
-    z-index: -20;
     }
-
-#about container{
-    background-color: black;
-}
-
 
 
 /* Preloader */
@@ -898,6 +927,16 @@ header video {
 }
 
 
+    @media screen and (max-width:500px){
+        #about{
+            padding-top: 15px; 
+        }
+        
+        #year_run{
+            font-size: 25px;
+        }
+}
+
 
 /*New section for header css inserted*/
 
@@ -1056,16 +1095,4 @@ header{
 }
 
 }
-
-
-    @media screen and (max-width:500px){
-        #about{
-            padding-top: 15px; 
-        }
-        
-        #year_run{
-            font-size: 25px;
-        }
-}
-    
 

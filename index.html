@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Aakshank 2k16, website">
+    <meta name="description" content="Aakshank is one of the largest college cultural festival oraganized by IET-DAVV">
     <meta name="author" content="IET, DAVV">
     <link rel="icon" href="img/icon_logo.ico" type="image/x-icon">
 
@@ -63,7 +63,10 @@
                             dataType:"json",
                             contentType:"application/json",
                             data :data,
-                            success:function(res){console.log(res);}
+                            success:function(res){
+                                console.log(res);
+                                window.location.replace("thankYou.html");                 
+                                }
                         });
                     }
                     
@@ -263,7 +266,7 @@
 <!--    model for campus abdr ends here-->
     <header>
         <video autoplay loop="true"
-  poster=""
+  poster="img/mobile_back.jpg"
   id="bgvid">
     <source src="video/back_v.webm" type="video/webm">
     <source src="video/back_v.mp4" type="video/mp4">
@@ -361,23 +364,23 @@
     
     
     <section id="update">
-        <div class="container">
+        <div class="container-fluid">
             <h1 class="small-heading"><small><span class="glyphicon glyphicon-refresh"></span></small> Recent Updates</h1>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 col-xs-10 col-xs-offset-1 col-sm-offset-0">
                 <!-- facebook feed attachment -->
                     <div class="fb-page" data-href="https://www.facebook.com/aakshank/?fref=ts" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/aakshank/?fref=ts"><a href="https://www.facebook.com/aakshank/?fref=ts">Aakshank, IET-DAVV</a></blockquote></div></div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-3">
                 <!-- twitter feed Integration -->
                     <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/aakshank" data-widget-id="677620877412966401">Tweets by @aakshank</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 
                 </div>
-                <div class="col-sm-4">
-                    <!-- SnapWidget -->
-<script src="http://snapwidget.com/js/snapwidget.js"></script>
-<iframe src="http://snapwidget.com/in/?h=YWFrc2hhbmt8aW58MTI1fDN8NHx8bm98NXxmYWRlT3V0fG9uU3RhcnR8eWVzfHllcw==&ve=271215" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+                <div class="col-sm-3 col-xs-10 col-xs-offset-1 col-sm-offset-1">
+                    <!-- instagram feed -->
+                        <div id="instafeed" class="row">
+                        </div>
                     <!--instagram feed ends -->
                 </div>
             </div>
@@ -393,24 +396,23 @@
                     <hr class="primary">
                     <p>For any information regarding events, contact us at following phone numbers and email-id</p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
+                <div class="col-lg-3 col-lg-offset-3 col-xs-8 col-xs-offset-2 text-center">
                     <div class="row">
-                    <div class="col-xs-4 col-xs-offset-1">
-                        <i class="fa fa-phone fa-3x wow bounceIn" style="font-size:60px"></i>    
+                    <div class="col-xs-4 col-sm-2">
+                        <i class="fa fa-phone fa-3x" style="font-size:60px"></i>    
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-8">
                     <p> +918982310872<br>
                     +919098021458</p>
                     </div>
-                    <div class="col-xs-1"></div>
                     </div>
                     </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-3 text-center col-xs-8 col-xs-offset-2 col-lg-offset-0">
                     <div class="row">
-                        <div class="col-xs-3 col-xs-offset-1"><i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s" style="line-height:-1000px" style="font-size:65px;padding-left:40px"></i></div>
-                        <div class="col-xs-4">
+                        <div class="col-xs-4 col-sm-3"><i class="fa fa-envelope-o fa-3x" data-wow-delay=".1s" style="font-size:60px;"></i></div>
+                        <div class="col-xs-8">
                             
-                    <p><a href="mailto:aakshank@ietdavv.edu.in" style="padding-left:25px;"> aakshank@ietdavv.edu.in</a></p>
+                    <p style="padding-top:17px"><a href="mailto:aakshank@ietdavv.edu.in" style="padding-left:25px;"> aakshank@ietdavv.edu.in</a></p>
                 </div>
                         </div>
                     </div>
@@ -483,6 +485,7 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     
+    
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
@@ -508,7 +511,21 @@
 	var parallax = new Parallax(scene);
 
 	</script>
-
+    
+<!--    Instafeed for instagram-->
+    <script src="js/instafeed.min.js"></script>
+    <script>
+            var feed = new Instafeed({
+                get: 'tagged',
+                tagName: 'aakshank',
+                clientId: '467ede5a6b9b48ae8e03f4e2582aeeb3',
+                sortBy: 'most-recent',
+                limit: 12,
+                template: '<a href="{{link}}" class="col-xs-4" target="_blank"><img class="img-responsive" src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>'
+            });
+            feed.run();            
+    </script>
+<!--Instafeed integration ends here-->
     
     
 </body>
