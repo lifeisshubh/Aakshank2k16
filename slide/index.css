@@ -10,6 +10,14 @@ body {
     margin:0;
 }
 
+.event_information{
+    font-size: 14px !important;
+}
+
+.event_information tr{
+    padding: 20px 10px;
+}
+
 .com {
      margin:0;
     padding: 0px;
