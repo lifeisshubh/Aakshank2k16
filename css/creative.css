@@ -655,6 +655,11 @@ body {
     color: white;
 }
 
+#update{
+    background-image: url(/img/dots.png);
+    background-repeat: repeat;
+}
+
 @font-face {
     font-family: pf;
     src: url(../fonts/Polygon-Regular.otf);
