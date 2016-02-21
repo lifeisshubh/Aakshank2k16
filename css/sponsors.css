@@ -1,0 +1,16 @@
+header#header{
+    background-image: url(../img/dark_embroidery.png);
+    color: #ccc;
+    font-family: "Century Gothic";
+    text-align: center;
+}
+
+figcaption{
+    
+}
+
+body{
+    background-image: url(../img/paisley.png);
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
